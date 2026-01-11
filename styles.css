@@ -9,6 +9,8 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f4f7ff;
     color: #333;
+    overflow-x: hidden; 
+    width: 100%;
 }
 
 /* --- cache le texte --- */
@@ -207,8 +209,8 @@ section {
 
 /* --- SECTION COMPÉTENCES --- */
 .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    display: flex;
+    flex-direction: column;
     gap: 2rem;
     padding: 1rem 0;
 }
@@ -287,7 +289,7 @@ section {
     align-items: center;
     text-decoration: none;
     color: inherit;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .project-card img {
@@ -331,6 +333,9 @@ section {
     border-radius: 5px;
     font-size: 1rem;
     transition: all 0.3s ease;
+    background-color: white; 
+    color: black;
+    margin-top: 5px;
 }
 
 .form_contact #message {
@@ -343,6 +348,7 @@ section {
     outline: none;
     border-color: #00E5FF;
     box-shadow: 0 0 10px rgba(0, 229, 255, 0.3);
+    background-color: white;
 }
 
 .border-success {
@@ -367,7 +373,7 @@ section {
     width: 100%;
     padding: 1rem;
     background: linear-gradient(135deg, #0a9df0e6, #f629e1db);
-    color: #000;
+    color: white;
     border: none;
     border-radius: 5px;
     font-size: 1.1rem;
@@ -438,46 +444,47 @@ section {
     width: 200px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width : 1024px) {
     .logo-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 40%; 
-    height:100%;
-    object-fit: cover; 
-    z-index: 1;
-}
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 40%; 
+        height:100%;
+        object-fit: cover; 
+        z-index: 1;
+    }
 
 
-.sous_titre, .nav {
-    position: relative;
-    z-index: 10; 
-}
+    .sous_titre, .nav {
+        position: relative;
+        z-index: 10; 
+    }
 
-#sousTitre {
-    color: white;
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    opacity: 0.85;
-    margin-right: 680px; 
-    margin-bottom: 20px; 
-}
+    #sousTitre {
+        color: white;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        opacity: 0.85;
+        margin-right: 680px; 
+        margin-bottom: 20px; 
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 912px) {
     .header {
         position: relative;
-        height: 250px; /* On garde une hauteur fixe */
+        height: 250px; 
         display: flex;
         flex-direction: column;
-        justify-content: flex-end; /* Pousse le texte vers le bas */
-        align-items: center;       /* Centre horizontalement */
+        justify-content: flex-end; 
+        align-items: center;      
         background-color: #000;
+        overflow: hidden;
     }
 
     .logo-bg {
-        position: absolute; /* La vidéo redevient le fond total */
+        position: absolute; 
         top: 0;
         left: 0;
         width: 100%;
@@ -487,23 +494,19 @@ section {
     }
 
     #sousTitre {
-        color: white;
-        font-size: 0.6rem;
-        text-transform: uppercase;
-        opacity: 0.85;
-        text-align: left;
-        margin: 0px 700px 90px 10px !important; 
-        width: 100%;
-    }
-
-    #sousTitre {
-        margin: 0 !important;
-        text-align: center;
+        position: relative;
+        z-index: 10;
         color: white;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); 
         font-size: 0.8rem;
-        width: 100%;
+        text-transform: uppercase;
+        opacity: 0.85;
+        white-space: nowrap; 
+        width: auto;
+        text-align: center;
+        margin-bottom: 2s0px !important; 
     }
+
     .menu_burger {
         position: absolute;
         bottom: 15px;
@@ -540,16 +543,19 @@ section {
     }
 
     #sousTitre {
-        position: relative;
-        z-index: 10;
-        color: white;
-        font-size: 0.7rem;
-        text-transform: uppercase;
-        opacity: 0.85;
-        text-align: center;
-       
-        width: 100%; 
-    }
+    position: absolute;
+    bottom: 30px; 
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    white-space: nowrap;     
+    width: auto;             
+    color: white;
+    font-size: 0.7rem;      
+    text-transform: uppercase;
+    opacity: 0.85;
+    text-align: center;
+}
 
     .menu_burger {
         display: flex !important;
@@ -587,8 +593,6 @@ section {
     
    /* --- RESPONSIVE : 1024px et en dessous --- */
 @media screen and (min-width: 1024px) and (max-width: 1024px) {
-    
-    /* 1. On cache le menu horizontal */
     .nav ul {
         display: none; 
         position: fixed;
@@ -601,12 +605,10 @@ section {
         margin: 0; 
     }
 
-    /* 2. On affiche le menu quand il est actif (clic burger) */
     .nav ul.active {
         display: flex !important;
     }
 
-    /* 3. Style du bouton Burger */
     .menu_burger {
         display: flex !important;
         position: absolute; 
@@ -633,7 +635,6 @@ section {
         transition: all 0.3s ease;
     }
 
-    /* 4. Centrage du sous-titre */
     #sousTitre {
         color: white;
         font-size: 0.6rem;
@@ -644,6 +645,43 @@ section {
         width: 100%;
     }
 }
+
+@media screen and  (max-width: 1280px) {
+    #sousTitre {
+        margin-right: 900px; 
+    }
+}
+
+
+ 
+
+
+/* --- FOOTER RESPONSIVE --- */
+@media screen and (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        gap: 30px;            
+        text-align: center;    
+        padding: 3rem 1rem; 
+    }    
+
+    .footer .logo-footer {
+        justify-content: center; 
+        width: 100%;            
+        height: 60px;
+    }
+
+    .footer .social {
+        display: flex;
+        flex-direction: column;
+        align-items: center;   
+    }
+
+    .footer .social ul {
+        justify-content: center; 
+    }
+}
+
 
     /* Animation des barres en X */
     .menu_burger.active .bar:nth-child(1) {
