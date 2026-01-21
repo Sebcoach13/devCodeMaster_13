@@ -406,6 +406,7 @@ section {
     color: white;
 }
 
+
 .footer .social ul {
     display: flex;
     list-style: none;
@@ -648,7 +649,7 @@ section {
 
 @media screen and  (max-width: 1280px) {
     #sousTitre {
-        margin-right: 900px; 
+        margin-right: 850px; 
     }
 }
 
