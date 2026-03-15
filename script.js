@@ -72,7 +72,7 @@ if (burger) {
         form.addEventListener('submit', (e) => {
             e.preventDefault();
             btn.textContent = "Envoi...";
-            fetch("https://formspree.io/f/movgzvyg", {
+            fetch("https://formspree.io/f/xaqpddjz", {
                 method: "POST",
                 body: new FormData(form),
                 headers: { 'Accept': 'application/json' }
