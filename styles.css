@@ -1,4 +1,6 @@
-/* --- CONFIGURATION GÉNÉRALE --- */
+
+ 
+ /* --- CONFIGURATION GÉNÉRALE --- */
 * {
     margin: 0;
     padding: 0;
@@ -65,7 +67,7 @@ body {
     font-size: 0.7rem;
     text-transform: uppercase;
     opacity: 0.85;
-    margin-right: 1070px; 
+    margin-right: 1210px; 
     margin-bottom: 10px; 
 }
 
@@ -94,6 +96,7 @@ body {
 .liste a:hover {
     background: linear-gradient(135deg, #53f5f2, #ff44e9fc); 
     -webkit-background-clip: text; 
+    background-clip: text;
     -webkit-text-fill-color: transparent; 
 }
 
@@ -117,21 +120,35 @@ body {
 /* --- SECTION MAIN --- */
 main {
     padding: 2rem;
-    background-color: #0b0e14; 
+    background-color: #000; 
     min-height: 80vh;
     color: #fff;
+}
+
+ .hero-business p  {
+    color: #fff;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.hero-business .hero-benefits{
+    display: flex;
+    font-size: 1.2rem;
+    gap: 3rem;
+    margin-top: 2rem;
+    justify-content: center;
+}
+.hero-business .cta-grid  {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    gap: 2rem;
 }
 
 .presentation h1 {
     font-size: 2rem; 
     margin-bottom: 1rem; 
     text-align: center;
-}
-
-.presentation p {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-top: 1rem;
 }
 
 #page-contact p {
@@ -147,11 +164,33 @@ section {
 
 .section-title {
     color: #CCFF00;
-    font-size: 1.8rem;
+    font-size: 2rem;
     margin-bottom: 1.5rem;
+    margin-top: 5rem;
+    font-family: 'Courier New', monospace;
 }
 
 /* --- SECTION PRÉSENTATION --- */
+
+.presentation p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-top: rem;
+    margin-bottom: em;
+}
+ .presentation-text .presentationDomains {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+        line-height: 1.6;
+    
+}
+#page-presentation .presentation-text .presentationConclusion  {
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+}
 #page-presentation {
     display: flex;
     flex-direction: column;
@@ -313,7 +352,54 @@ section {
     line-height: 1.4;
 }
 
+/* --- SECTION SERVICES --- */
+ .hero-service h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #CCFF00;
+    font-family: 'Courier New', monospace;
+   
+}
+.hero-service p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+   
+}
+.service-section .container h2 {
+    font-size: 2rem;
+    margin-top: 5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #CCFF00;
+    font-family: 'Courier New', monospace;
+}
+.service-section .texte{
+    font-size: 1.2rem;
+    line-height: 1.6;
+     margin-top: 1rem;
+     margin-bottom: 2rem;
+}
+.service-section .texte ul {
+    list-style: none;
+    padding-left: 20px;
+    position: relative;
+}
+.service-section .project-card{
+   margin-top: 1rem;
+}
+
+
+
 /* --- SECTION CONTACT --- */
+#page-contact h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    color: #CCFF00;
+    font-size: 2rem;
+    font-family: 'Courier New', monospace;
+}
 .form_contact {
     max-width: 600px;
     margin: 0 auto;
@@ -323,6 +409,8 @@ section {
     border: 2px solid rgba(0, 229, 255, 0.2);
     box-shadow: 0 10px 30px rgba(0, 229, 255, 0.1);
 }
+
+
 
 .form_contact input,
 .form_contact textarea {
@@ -368,8 +456,7 @@ section {
     margin-top: -1.2rem;
     margin-bottom: 1.2rem;
 }
-
-.btn_submit {
+#btn-envoyer {
     width: 100%;
     padding: 1rem;
     background: linear-gradient(135deg, #0a9df0e6, #f629e1db);
@@ -382,7 +469,25 @@ section {
     transition: all 0.4s ease;
     text-transform: uppercase;
     letter-spacing: 1px;
+   
 }
+
+.btn_submit {
+    width: 100%;
+    padding: 1rem;
+    
+    background: linear-gradient(135deg, #0a9df0e6, #f629e1db);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
 
 .btn_submit:hover {
     opacity: 1;
@@ -394,6 +499,40 @@ section {
     opacity: 0.8;
     cursor: not-allowed;
     filter: grayscale(0.5);
+}
+
+.cta-home .cta-buttons a {
+    margin-top: 30px;
+    display: inline-block;
+    padding: 1rem 1rem;
+    background: linear-gradient(135deg, #0a9df0e6, #f629e1db);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cta-services .cta-buttons a {
+    margin-top: 30px;
+    display: inline-block;
+    padding: 1rem 1rem;
+    background: linear-gradient(135deg, #0a9df0e6, #f629e1db);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 /* --- FOOTER --- */
@@ -425,6 +564,7 @@ section {
 .footer .social a:hover {
     background: linear-gradient(135deg, #0a9df0e6, #f629e1db);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     filter: drop-shadow(0 0 8px rgba(0, 229, 255, 0.5));
     transform: translateY(-5px) scale(1.1);
@@ -443,6 +583,12 @@ section {
     gap: 15px;
     height: 100px;
     width: 200px;
+}
+.footer .copyright {
+    font-size: 1rem;
+    color: #ccc;
+    margin-right: 110px;
+    text-align: right;
 }
 
 @media screen and (max-width : 1024px) {
