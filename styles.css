@@ -182,8 +182,11 @@ section {
     font-size: 1.2rem;
     margin-bottom: 1rem;
     margin-top: 3rem;
-        line-height: 1.6;
+    line-height: 1.6;
     
+}
+#page-presentation   .presentation-text  .presentationLocation{
+     margin-top: 2rem;   
 }
 #page-presentation .presentation-text .presentationConclusion  {
     text-align: center;
