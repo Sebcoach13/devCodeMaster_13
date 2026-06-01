@@ -626,6 +626,22 @@ section {
     transform: translateY(-5px) scale(1.1);
 }
 
+.legal-page .container h1 {
+    margin-bottom : 20px;
+}
+
+.legal-section h2{
+    margin-bottom : 20px;
+}
+
+.legal-section p{
+    margin-bottom : 20px;
+}
+
+.legal-section .lien  {
+    color :#ccc;
+}
+
 .legal-page .container  {
     max-width: 850px;
     margin: 40px auto;
@@ -646,6 +662,9 @@ section {
     border: 2px solid rgba(0, 229, 255, 0.2);
 }
 
+.cgv .container h1, h2, h3, p {
+    margin-bottom: 20px;
+}
 .cgv .container ul {
     list-style: none;
 }
