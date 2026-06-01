@@ -507,6 +507,19 @@ section {
     cursor: not-allowed;
     filter: grayscale(0.5);
 }
+.cta-item {
+    background: #161b22; /* Le fond gris très foncé/bleuté style GitHub */
+    padding: 1.5rem 2rem; /* L'espace interne pour que le texte respire */
+    border-radius: 8px; /* Les angles bien arrondis */
+    border: 1px solid rgba(0, 229, 255, 0.2); /* La fine bordure cyan transparente */
+    display: flex; /* Aligne l'œil et le texte côte à côte sur la même ligne */
+    align-items: center; /* Centre verticalement l'œil par rapport au texte */
+    gap: 15px; /* L'espace fixe entre l'icône de l'œil et le début du texte */
+}
+.cta-item i {
+    font-size: 1.8rem;
+    color: #ffe044fc;
+}
 
 .cta-home .cta-buttons a {
     margin-top: 30px;
@@ -591,12 +604,52 @@ section {
     height: 100px;
     width: 200px;
 }
-.footer .copyright {
+.footer .copyright  {
     font-size: 1rem;
     color: #ccc;
     margin-right: 110px;
     text-align: right;
+     text-align:center;
 }
+
+.footer .copyright .mentions a{
+     color:#ccc;
+     text-decoration:none;
+}
+
+.footer .copyright .mentions a:hover {
+    background: linear-gradient(135deg, #0a9df0e6, #f629e1db);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 8px rgba(0, 229, 255, 0.5));
+    transform: translateY(-5px) scale(1.1);
+}
+
+.legal-page .container  {
+    max-width: 850px;
+    margin: 40px auto;
+    background: #161b22;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center; 
+    border: 2px solid rgba(0, 229, 255, 0.2);
+}
+
+.cgv .container  {
+    max-width: 850px;
+    margin: 40px auto;
+    background: #161b22;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center; 
+    border: 2px solid rgba(0, 229, 255, 0.2);
+}
+
+.cgv .container ul {
+    list-style: none;
+}
+
 
 @media screen and (max-width : 1024px) {
     .logo-bg {
