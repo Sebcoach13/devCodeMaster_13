@@ -665,6 +665,7 @@ section {
 .cgv .container h1, h2, h3, p {
     margin-bottom: 20px;
 }
+
 .cgv .container ul {
     list-style: none;
 }
@@ -872,7 +873,7 @@ section {
     }
 }
 
-@media screen and  (max-width: 1280px) {
+@media screen and  (max-width: 1080px) {
     #sousTitre {
         margin-right: 850px; 
     }
