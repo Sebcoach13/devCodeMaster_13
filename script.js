@@ -14,7 +14,7 @@ if (burger) {
     /* --- EFFET DACTYLO --- */
     const monNom = document.querySelector('#sousTitre');
     if (monNom) {
-        const texteNom = "Votre spécialiste en développement web";
+        const texteNom = "Votre spécialiste en développement web & Ingénierie de données";
         let i = 0;
         monNom.textContent = ""; 
         function taperNom() {
