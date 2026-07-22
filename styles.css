@@ -671,7 +671,7 @@ section {
 }
 
 /* =========================================================
-   --- RESPONSIVE UNIFIÉ ET PROPRE ---
+   --- RESPONSIVE---
    ========================================================= */
 
 @media screen and (max-width: 1024px) {
@@ -705,7 +705,7 @@ section {
     #sousTitre, #sousTitre2 {
         font-size: 0.75rem;
         text-align: center;
-        white-space: normal; /* Autorise le retour à la ligne naturel sur petits écrans */
+        white-space: normal; 
     }
 
     .menu_burger {
