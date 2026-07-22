@@ -14,12 +14,28 @@ if (burger) {
     /* --- EFFET DACTYLO --- */
     const monNom = document.querySelector('#sousTitre');
     if (monNom) {
-        const texteNom = "Votre spécialiste en développement web & Ingénierie de données";
+        const texteNom = "Votre spécialiste en développement web";
+
         let i = 0;
         monNom.textContent = ""; 
         function taperNom() {
             if (i < texteNom.length) {
                 monNom.textContent += texteNom.charAt(i);
+                i++;
+                setTimeout(taperNom, 150); 
+            }
+        }
+        taperNom();
+    }
+
+    const monNom2 = document.querySelector('#sousTitre2');
+    if (monNom2) {
+        const texteNom2 = "& ingénierie de données";
+        let i = 0;
+        monNom2.textContent = ""; 
+        function taperNom() {
+            if (i < texteNom2.length) {
+                monNom2.textContent += texteNom2.charAt(i);
                 i++;
                 setTimeout(taperNom, 150); 
             }
