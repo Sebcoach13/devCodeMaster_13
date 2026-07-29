@@ -1,21 +1,50 @@
-document.addEventListener('DOMContentLoaded', () => {
+// Fonction pour charger un composant HTML
+async function chargerComposant(elementId, fichier) {
+    const el = document.getElementById(elementId);
+    if (el) {
+        const reponse = await fetch(fichier);
+        const html = await reponse.text();
+        el.innerHTML = html;
+    }
+}
 
-   /* --- MENU BURGER --- */
-   const burger = document.getElementById('menu_burger');
-   const navUl = document.querySelector('.nav ul');
+document.addEventListener('DOMContentLoaded', async () => {
 
-   if (burger) {
-       burger.addEventListener('click', () => {
-           navUl.classList.toggle('active');   // Affiche/cache le menu
-           burger.classList.toggle('active');  // Anime les barres en "X" (Important !)
-       });
-   }
+    // 1. Charger le header et le footer
+    await chargerComposant('main-header', 'header.html');
+    await chargerComposant('main-footer', 'footer.html');
 
-    /* --- EFFET DACTYLO (100% CONSERVÉ) --- */
+    // 2. FORCER LA LECTURE DES VIDÉOS SUR IOS SAFARI
+    const videos = document.querySelectorAll('video');
+    videos.forEach(video => {
+        // Sécurité supplémentaire pour iOS
+        video.muted = true;
+        video.setAttribute('playsinline', '');
+        
+        // Force le lancement
+        const playPromise = video.play();
+        if (playPromise !== undefined) {
+            playPromise.catch(error => {
+                console.log("Autoplay bloqué par le navigateur / mode économie d'énergie :", error);
+            });
+        }
+    });
+
+    // 3. Initialiser le Menu Burger
+    const burger = document.getElementById('menu_burger');
+    const navUl = document.querySelector('.nav ul');
+
+    if (burger && navUl) {
+        burger.addEventListener('click', () => {
+            navUl.classList.toggle('active');
+            burger.classList.toggle('active');
+        });
+    }
+
+    // 3. Initialiser L'EFFET DACTYLO (une fois le header chargé)
     const monNom = document.querySelector('#sousTitre');
     if (monNom) {
         const texteNom = "Votre spécialiste en développement web";
-
         let i = 0;
         monNom.textContent = ""; 
         function taperNom() {
@@ -71,14 +100,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     btn.style.opacity = "1";
                     inputMessage.classList.add('border-success');
                     inputMessage.classList.remove('border-error');
-                    compteur.style.color = "#27ae60"; // Vert
+                    compteur.style.color = "#27ae60"; 
                 } else {
                     btn.disabled = true;
                     btn.style.opacity = "0.4";
                     if (longueur > 0) {
                         inputMessage.classList.add('border-error');
                         inputMessage.classList.remove('border-success');
-                        compteur.style.color = "#e74c3c"; // Rouge
+                        compteur.style.color = "#e74c3c"; 
                     }
                 }
             });
