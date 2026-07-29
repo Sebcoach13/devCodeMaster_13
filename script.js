@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // 1. Charger le header et le footer
     await chargerComposant('main-header', 'header.html');
-    await chargerComposant('main-footer', 'footer.html');
+    await chargerComposant('main_footer', 'footer.html');
 
     // 2. FORCER LA LECTURE DES VIDÉOS SUR IOS SAFARI
     const videos = document.querySelectorAll('video');
