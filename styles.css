@@ -671,6 +671,44 @@ section {
     list-style: none;
 }
 
+/* --- PARTENAIRE FRANCE NUM --- */
+
+
+/* Force le footer à superposer la bande du bas */
+footer, .footer {
+    display: flex !important;
+    flex-wrap: wrap !important; /* Permet le retour à la ligne */
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Bloc France Num : prend 100% de la largeur tout en bas */
+.partner-badge {
+    flex: 0 0 100% !important; /* Force le passage sur une nouvelle ligne complète */
+    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+.partner-badge p {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #e0e0e0;
+    margin: 0;
+}
+
+.partner-badge img {
+    width:80px;
+    border-radius: 4px;
+}
 /* =========================================================
    --- RESPONSIVE---
    ========================================================= */
